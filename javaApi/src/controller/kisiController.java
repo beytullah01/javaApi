@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.implementKisiDao;
 import dao.kisiDao;
+
 
 @WebServlet("/kisiiController")
 public class kisiController extends HttpServlet{
@@ -29,7 +31,7 @@ public class kisiController extends HttpServlet{
 		protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 			
 	
-			int tc=Integer.parseInt(req.getParameter("tc"));
+			long tc=Long.parseLong(req.getParameter("tc"));
 			String ad=req.getParameter("ad");
 			String soyad=req.getParameter("soyad");
 			String kullaniciAdi=req.getParameter("kullaniciAdi");
@@ -38,6 +40,9 @@ public class kisiController extends HttpServlet{
 			kisiDao kisi=new implementKisiDao();
 			
 			kisi.kisiyiEkle(tc, ad, soyad, kullaniciAdi, sifre);
+			
+			RequestDispatcher disp=req.getRequestDispatcher("giris.jsp");
+			disp.forward(req, resp);
 			
 			System.out.println("beytullah bozkurrt");
 

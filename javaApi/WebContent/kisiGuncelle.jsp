@@ -4,10 +4,6 @@
 <html>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-
-
-<head>
-	<meta charset="UTF-8">
 <style>
 
 #container
@@ -26,38 +22,28 @@
     }
 
 </style>
-<script>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+ <script>
         function kontrol(){
-        	  if (document.form.tc.value == ""){
-                  alert ( "tcnizi Giriniz" );
-                  return false;
-              }
-        	  if (document.form.ad.value == ""){
-                  alert ( "adınızı Giriniz" );
-                  return false;
-              }
-        	  if (document.form.soyad.value == ""){
-                  alert ( "soyadınızı Giriniz" );
-                  return false;
-              }
-            if (document.form.kullaniciAdi.value == ""){
-                alert ( " kullanıcı Adınızı Yazınız" );
-                return false;
-            }
             if (document.form.sifre.value == ""){
-                alert ( "Sifrenizi Giriniz" );
+                alert ( " kullanıcı sifrenizi Yazınız" );
                 return false;
             }
+           
+            }
+        
           
         }
     </script>
-
-<title>Insert title here</title>
 </head>
 <body>
+
   <div id="container">
   <div class="card" style="width: 18rem;">
-<form  name="form" action="kisiiController" method="post" onSubmit="return kontrol();" >
+<form action="kisiGuncelleController" method="post" >
 
 	<div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">tc kimlik no:</label>
@@ -66,12 +52,12 @@
   </div>
   
 	<div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">ad</label>
+    <label for="exampleInputEmail1" class="form-label">ad:</label>
     <input type="text" class="form-control" name="ad" placeholder=" adınızı giriniz">
   
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">soyad</label>
+    <label for="exampleInputEmail1" class="form-label">soyad:</label>
     <input type="text" class="form-control" name="soyad" placeholder="soyadınızı giriniz">
   
   </div>
@@ -86,13 +72,15 @@
     <input type="password" class="form-control" name="sifre" placeholder="kullanıcı sifrenizi giriniz">
   </div>
 
-  <button type="submit" style="margin-left:75px;" class="btn btn-primary">kayıt yap</button>
-  <a href="giris.jsp">giris sayfasına dön</a>
+  <button type="submit" style="margin-left:75px;" class="btn btn-primary">Kaydet</button>
+
   
  
 </form>
  </div>
 </div>
+
+
 
 
 </body>
