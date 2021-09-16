@@ -46,12 +46,7 @@ public class login extends HttpServlet {
 				
 				
 			}
-			
-			//HttpSession session=req.getSession();
-			
-			//session.setAttribute(kullaniciAdi, kullaniciAdi);
-			//session.getAttribute(kullaniciAdi);
-			
+		
 			
 		
 		
